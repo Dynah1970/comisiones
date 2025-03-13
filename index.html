@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasas y Comisiones</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>TASAS DE INTERÉS Y COMISIONES</h1>
+    <h3>Electrónico - Vigente a partir del 8 de enero</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Tipo de Tasa</th>
+                <th>Tipo de Interés (%)</th>
+                <th>Comisión a Pagar (%)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="categoria">
+                <td colspan="3">Tasas Ordinarias</td>
+            </tr>
+            <tr>
+                <td>105%</td>
+                <td contenteditable="true">105</td>
+                <td contenteditable="true">4</td>
+            </tr>
+            <tr>
+                <td>100%</td>
+                <td contenteditable="true">100</td>
+                <td contenteditable="true">3.5</td>
+            </tr>
+            <tr>
+                <td>95%</td>
+                <td contenteditable="true">95</td>
+                <td contenteditable="true">3</td>
+            </tr>
+            <tr>
+                <td>90%</td>
+                <td contenteditable="true">90</td>
+                <td contenteditable="true"2.5</td>
+            </tr>
+            <tr>
+                <td>85%</td>
+                <td contenteditable="true">85</td>
+                <td contenteditable="true">2</td>
+            </tr>
+
+            <tr class="categoria">
+                <td colspan="3">Tasas Diamante</td>
+            </tr>
+            <tr>
+                <td>75%</td>
+                <td contenteditable="true">75</td>
+                <td contenteditable="true">3.5</td>
+            </tr>
+            <tr>
+                <td>70%</td>
+                <td contenteditable="true">70</td>
+                <td contenteditable="true">3.5</td>
+            </tr>
+            <tr>
+                <td>65%</td>
+                <td contenteditable="true">65</td>
+                <td contenteditable="true">3.5</td>
+            </tr>
+            <tr>
+                <td>60%</td>
+                <td contenteditable="true">60</td>
+                <td contenteditable="true">3.5</td>
+            </tr>
+            <tr>
+                <td>55%</td>
+                <td contenteditable="true">55</td>
+                <td contenteditable="true">3.5</td>
+            </tr>
+            <tr>
+                <td>50%</td>
+                <td contenteditable="true">50</td>
+                <td contenteditable="true">3.5</td>
+            </tr>
+            <tr>
+                <td>45%</td>
+                <td contenteditable="true">45</td>
+                <td contenteditable="true">3.5</td>
+            </tr>
+            <tr>
+                <td>40%</td>
+                <td contenteditable="true">40</td>
+                <td contenteditable="true">3.5</td>
+            </tr>
+
+            <tr class="categoria">
+                <td colspan="3">Tasa Esmeralda</td>
+            </tr>
+            <tr>
+                <td>79%</td>
+                <td contenteditable="true">79</td>
+                <td contenteditable="true">3</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Casos Especiales</h2>
+    <ul>
+        <li>Crédito Paga Deuda: interés único de 65% y comisión del 13%.</li>
+        <li>Plazos cortos de 6 y 9 meses y "dimex contigo" mantienen comisión del 7%.</li>
+        <li>JYP IMSS e ISSSTE con Tasa Esmeralda en Cita de Telemarketing pagan 6% de comisión.</li>
+        <li>Otros créditos electrónicos con Cita de Telemarketing mantienen 8% de comisión.</li>
+    </ul>
+
+</body>
+</html>
+
+    <!-- Tabla de Bonos y Comisiones Adicionales -->
+    <h2>Bonos y Comisiones Adicionales Nomina</h2>
+    <table id="tabla-bonos">
+        <thead>
+            <tr>
+                <th>Plazo (meses)</th>
+                <th>Tasa de Interés (%)</th>
+                <th>CAT con IVA (%)</th>
+                <th>% de Comisión</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>18</td>
+                <td>34.85</td>
+                <td>48.82</td>
+                <td>1.5</td>
+            </tr>
+            <tr>
+                <td>24</td>
+                <td>34.85</td>
+                <td>48.82</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>30</td>
+                <td>28.60</td>
+                <td>38.72</td>
+                <td>2.5</td>
+            </tr>
+            <tr>
+                <td>36</td>
+                <td>34.85</td>
+                <td>48.82</td>
+                <td>3</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Formulario de Precalificación -->
+    <h2>Precalificación</h2>
+    <form id="formulario-precalificacion">
+        <label for="monto">Monto del Crédito:</label>
+        <input type="number" id="monto" required>
+
+        <label for="plazo">Plazo (meses):</label>
+        <select id="plazo">
+            <option value="18">18</option>
+            <option value="24">24</option>
+            <option value="30">30</option>
+            <option value="36">36</option>
+        </select>
+
+        <label for="tasa">Tipo de Tasa:</label>
+        <select id="tasa">
+            <option value="105">Tasa Ordinaria</option>
+            <option value="75">Tasa Diamante</option>
+            <option value="79">Tasa Esmeralda</option>
+        </select>
+
+        <button type="button" onclick="calcularPrecalificacion()">Calcular</button>
+    </form>
+
+    <h3>Resultado:</h3>
+    <p id="resultado"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
